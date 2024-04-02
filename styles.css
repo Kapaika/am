@@ -1,0 +1,77 @@
+body {
+    background-image: url("assets/acid_background.png"); /* Background image */
+    background-position: center; /* Center the image */
+}
+
+.center {
+    display:flex;
+    flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
+    justify-content:center;
+    align-items:center;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.firstDiv {
+    display: flex; /* Enable flexbox for firstDiv */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center eleme*/
+    flex: 1; /* Makes divs equal width for desktop */
+    padding: 10px; /* Optional padding for content */
+    margin: 5px; /* Optional margin for spacing */
+}
+
+.thirdDiv {
+    display: flex;
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center eleme*/
+    flex: 1; /* Makes divs equal width for desktop */
+    padding: 10px; /* Optional padding for content */
+    margin: 5px; /* Optional margin for spacing */
+}
+
+.secondDiv {
+    flex: 1; /* Makes divs equal width for desktop */
+    padding: 10px; /* Optional padding for content */
+    margin: 5px; /* Optional margin for spacing */
+}
+
+.premier {
+    justify-content: center;
+    align-items: center;
+}
+
+#countdownDisplay {
+    justify-content: center;
+    align-items: center;
+    font-family: "Red Hat Mono", monospace;
+    color: #ECEB6F;
+}
+
+@media only screen and (max-width: 768px) { /* Change breakpoint as needed */
+    .center {
+      flex-direction: column; /* Makes divs vertical on mobile */
+    }
+    .firstDiv {
+        order:3;
+    }
+
+    .secondDiv {
+        order:2;
+    }
+
+    img {
+        width: 100%;
+    }
+    .thirdDiv {
+        order:1;
+    }    
+}
