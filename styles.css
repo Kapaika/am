@@ -1,6 +1,20 @@
 body {
-    background-image: url("assets/acid_background.png"); /* Background image */
-    background-position: center; /* Center the image */
+    overflow: hidden;
+}
+#background-desktop-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#background-mobile-video {
+    display: none;
 }
 
 .center {
@@ -8,6 +22,11 @@ body {
     flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
     justify-content:center;
     align-items:center;
+}
+
+
+.middle {
+    margin-top: 220px;
 }
 
 button {
@@ -44,6 +63,10 @@ button {
     margin: 5px; /* Optional margin for spacing */
 }
 
+.secondDiv img {
+    height: 449px;
+}
+
 .premier {
     justify-content: center;
     align-items: center;
@@ -57,6 +80,27 @@ button {
 }
 
 @media only screen and (max-width: 768px) { /* Change breakpoint as needed */
+    #background-desktop-video {
+        display: none;
+    }
+
+    .middle {
+        margin-top: 150px;
+    }    
+    
+    #background-mobile-video {
+        background-size: cover !important;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
     .center {
       flex-direction: column; /* Makes divs vertical on mobile */
     }
@@ -66,6 +110,10 @@ button {
 
     .secondDiv {
         order:2;
+    }
+
+    .secondDiv img {
+        height: 300px;
     }
 
     img {
