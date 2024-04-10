@@ -4,7 +4,7 @@ body {
 #background-desktop-video {
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    object-fit: fill;
     position: fixed;
     left: 0;
     right: 0;
@@ -26,7 +26,7 @@ body {
 
 
 .middle {
-    margin-top: 220px;
+    margin-top: 25vh;
 }
 
 button {
@@ -64,12 +64,20 @@ button {
 }
 
 .secondDiv img {
-    height: 449px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
 }
 
 .premier {
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Enable flexbox for firstDiv */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center eleme*/
+    flex: 1; /* Makes divs equal width for desktop */
+    padding: 10px; /* Optional padding for content */
+    margin: 5px; /* Optional margin for spacing */
 }
 
 #countdownDisplay {
