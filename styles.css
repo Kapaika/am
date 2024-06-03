@@ -1,6 +1,4 @@
-body {
-    overflow: hidden;
-}
+
 #background-desktop-video {
     width: 100vw;
     height: 100vh;
@@ -17,6 +15,13 @@ body {
     display: none;
 }
 
+.social-buttons {
+    margin-top: 5vh;
+    display:flex;
+    flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
+    justify-content:center;
+    align-items:center;
+}
 .center {
     display:flex;
     flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
@@ -26,7 +31,7 @@ body {
 
 
 .middle {
-    margin-top: 25vh;
+    margin-top: 5vh;
 }
 
 button {
@@ -63,11 +68,12 @@ button {
     margin: 5px; /* Optional margin for spacing */
 }
 
-.secondDiv img {
+.firstDiv .cover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 50vh;
+    height: 60vh;
+    margin-bottom: 20px;
 }
 
 .premier {
@@ -88,12 +94,25 @@ button {
 }
 
 @media only screen and (max-width: 768px) { /* Change breakpoint as needed */
+
+    body {
+        overflow: auto;
+    }
+
+    .social-buttons {
+        margin-top: 5vh;
+        display:flex;
+        flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
+        justify-content:center;
+        align-items:center;
+    }
+    
     #background-desktop-video {
         display: none;
     }
 
     .middle {
-        margin-top: 100px;
+        margin-top: 5px;
     }    
     
     #background-mobile-video {
@@ -109,7 +128,10 @@ button {
         bottom: 0;
         z-index: -1;
     }
+
     .center {
+      padding-left: 40px;
+      padding-right: 40px;
       flex-direction: column; /* Makes divs vertical on mobile */
     }
     .firstDiv {
@@ -120,9 +142,8 @@ button {
         order:2;
     }
 
-    .secondDiv img {
-        height: 265px;
-        width: 300px;
+    .firstDiv .cover {
+        height: auto;
     }
 
     img {
