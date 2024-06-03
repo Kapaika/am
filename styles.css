@@ -52,10 +52,6 @@ button {
     flex: 1; /* Makes divs equal width for desktop */
     padding: 10px; /* Optional padding for content */
     margin: 5px; /* Optional margin for spacing */
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 2px;
-    padding-bottom: 2px;
 }
 
 .thirdDiv {
@@ -135,8 +131,8 @@ button {
     }
 
     .center {
-      padding-left: 70px;
-      padding-right: 70px;
+      padding-left: 60px;
+      padding-right: 60px;
       flex-direction: column; /* Makes divs vertical on mobile */
     }
     .firstDiv {
