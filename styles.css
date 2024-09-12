@@ -1,8 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00ffcc;
+    background-image: url('assets/BG_WEB_HORIZONTAL_.mp4');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
 
 #background-desktop-video {
     width: 100vw;
     height: 100vh;
-    object-fit: fill;
+    object-fit: cover;
     position: fixed;
     left: 0;
     right: 0;
@@ -15,107 +30,95 @@
     display: none;
 }
 
-.social-buttons {
-    margin-top: 2vh;
-    display:flex;
-    flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
-    justify-content:center;
-    align-items:center;
+.container {
+    text-align: center;
+    padding: 20px;
 }
 
-.center {
-    display:flex;
-    flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
-    justify-content:center;
-    align-items:center;
+header {
+    margin-bottom: 10px;
 }
 
-
-.middle {
-    margin-top: 5vh;
-}
-
-button {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}
-
-.firstDiv {
-    display: flex; /* Enable flexbox for firstDiv */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements horizontally */
-    justify-content: center; /* Center eleme*/
-    flex: 1; /* Makes divs equal width for desktop */
-    padding: 10px; /* Optional padding for content */
-    margin: 5px; /* Optional margin for spacing */
-}
-
-.thirdDiv {
-    display: flex;
-    align-items: center; /* Center elements horizontally */
-    justify-content: center; /* Center eleme*/
-    flex: 1; /* Makes divs equal width for desktop */
-    padding: 10px; /* Optional padding for content */
-    margin: 5px; /* Optional margin for spacing */
-}
-
-.secondDiv {
-    flex: 1; /* Makes divs equal width for desktop */
-    padding: 10px; /* Optional padding for content */
-    margin: 5px; /* Optional margin for spacing */
-}
-
-.firstDiv .cover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh;
-    margin-bottom: 15px;
-}
-
-.premier {
-    display: flex; /* Enable flexbox for firstDiv */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements horizontally */
-    justify-content: center; /* Center eleme*/
-    flex: 1; /* Makes divs equal width for desktop */
-    padding: 10px; /* Optional padding for content */
-    margin: 5px; /* Optional margin for spacing */
-}
-
-#countdownDisplay {
-    justify-content: center;
+.logo {
+    text-align: center;
     align-items: center;
-    font-family: "Red Hat Mono", monospace;
-    color: #ECEB6F;
+    width: 40%;
 }
 
-@media only screen and (max-width: 768px) { /* Change breakpoint as needed */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
 
-    body {
-        overflow: auto;
+.event {
+    display: flex;
+    width: 40%;
+}
+
+.event-info {
+    width: 60%;
+}
+
+.event-info img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+.buy-ticket {
+    width: 40%;
+}
+
+.buy-ticket img {
+    width: 90%;
+    height: auto;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 3%;
+}
+
+/* Media Query for iPhone 14/15 Pro */
+@media screen and (max-width: 430px) {
+
+    header {
+        margin-top: 30%;
     }
 
-    .social-buttons {
-        margin-top: 2vh;
-        display:flex;
-        flex-wrap: wrap; /* Allows divs to wrap on smaller screens */
-        justify-content:center;
-        align-items:center;
-    }
-    
-    #background-desktop-video {
-        display: none;
+    .logo {
+        width: 90%;
     }
 
-    .middle {
-        margin-top: 5px;
-    }    
-    
+    .buy-ticket img {
+        width: 80%;
+    }
+
+    .content {
+        gap: 8px;
+    }
+
+    .event {
+        width: 90%;
+    }
+
+    footer {
+        margin-top: 10%;
+    }
+
+    .social-media img {
+        width: 10%;
+    }
+
     #background-mobile-video {
         background-size: cover !important;
         display: block;
@@ -130,27 +133,56 @@ button {
         z-index: -1;
     }
 
-    .center {
-      padding-left: 60px;
-      padding-right: 60px;
-      flex-direction: column; /* Makes divs vertical on mobile */
+    #background-desktop-video {
+        display: none;
     }
-    .firstDiv {
-        order:3;
+}
+
+/* Media Query for iPad and iPad Pro 11 */
+@media screen and (min-width: 768px) and (max-width: 1368px) {
+    header {
+        margin-top: 5%;
+    }
+    .logo {
+        width: 85%; /* Larger for tablets */
     }
 
-    .secondDiv {
-        order:2;
+    .event {
+        width: 90%; /* Adjust for tablet screen size */
     }
 
-    .firstDiv .cover {
-        height: auto;
-    }
-
-    img {
+    .buy-ticket img {
         width: 100%;
     }
-    .thirdDiv {
-        order:1;
-    }    
+
+    .event-info {
+        width: 70%;
+    }
+
+    .social-media img {
+        width: 7%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+
+    #background-mobile-video {
+        background-size: cover !important;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+
+    #background-desktop-video {
+        display: none;
+    }
 }
