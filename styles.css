@@ -7,11 +7,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #00ffcc;
-    background-image: url('assets/BG_WEB_HORIZONTAL_.mp4');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
     overflow: hidden;
-
 }
 
 #background-desktop-video {
@@ -42,7 +41,7 @@ header {
 .logo {
     text-align: center;
     align-items: center;
-    width: 40%;
+    width: 30%;
 }
 
 .content {
@@ -92,7 +91,7 @@ footer {
 @media screen and (max-width: 430px) {
 
     header {
-        margin-top: 30%;
+        margin-top: 20%;
     }
 
     .logo {
@@ -140,6 +139,48 @@ footer {
 
 /* Media Query for iPad and iPad Pro 11 */
 @media screen and (min-width: 768px) and (max-width: 1368px) {
+    header {
+        margin-top: 5%;
+    }
+    .logo {
+        width: 85%; /* Larger for tablets */
+    }
+
+    .event {
+        width: 90%; /* Adjust for tablet screen size */
+    }
+
+    .buy-ticket img {
+        width: 100%;
+    }
+
+    .event-info {
+        width: 70%;
+    }
+
+    .social-media img {
+        width: 7%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+
+    #background-mobile-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+    }
+
+
+    #background-desktop-video {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
     header {
         margin-top: 5%;
     }
